@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    tools:context=".PlacaActivity">
+
+    <TextView
+        android:id="@+id/txtSelectMarca3"
+        android:layout_width="367dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="116dp"
+        android:text="Selecione uma marca"
+        android:textAlignment="center"
+        android:textColor="@color/title"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/selectMarca3"
+        android:layout_width="369dp"
+        android:layout_height="58dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectMarca3" />
+
+    <ImageButton
+        android:id="@+id/btnVoltarPlaca"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
+
+    <TextView
+        android:id="@+id/txtSelectModelo"
+        android:layout_width="367dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="260dp"
+        android:text="Selecione um modelo"
+        android:textAlignment="center"
+        android:textColor="@color/title"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/selectModelo"
+        android:layout_width="369dp"
+        android:layout_height="58dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectModelo" />
+
+    <TextView
+        android:id="@+id/txtTitlePlaca"
+        android:layout_width="368dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="416dp"
+        android:text=" Insira a placa"
+        android:textAlignment="gravity"
+        android:textColor="@color/title"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inoutPlaca"
+        android:layout_width="268dp"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="PLACA"
+        android:textColor="#918888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitlePlaca" />
+
+    <Button
+        android:id="@+id/btnGravarPlaca"
+        android:layout_width="110dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="@color/button"
+        android:text="gravar "
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCarroMo2"
+        android:layout_width="148dp"
+        android:layout_height="154dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/carro" />
+</androidx.constraintlayout.widget.ConstraintLayout>

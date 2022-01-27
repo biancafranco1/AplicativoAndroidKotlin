@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    tools:context=".HomeActivity" >
+
+    <ImageView
+        android:id="@+id/imgCarro"
+        android:layout_width="197dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/carro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        android:text="Cadastro de veículos"
+        android:textAlignment="center"
+        android:textColor="#03173E"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCadMarca"
+        android:layout_width="202dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="400dp"
+        android:backgroundTint="@color/button"
+        android:text="Cadastrar marca"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCadModelo"
+        android:layout_width="200dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/button"
+        android:text="cadastrar modelo"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadMarca" />
+
+    <Button
+        android:id="@+id/btnCadPlaca"
+        android:layout_width="202dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="@color/button"
+        android:text="cadastrar placa"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadModelo"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
