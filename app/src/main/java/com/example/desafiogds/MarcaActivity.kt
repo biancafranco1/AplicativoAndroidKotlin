@@ -1,8 +1,11 @@
 package com.example.desafiogds
 
+import android.app.PendingIntent
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.widget.EditText
 import com.example.desafiogds.databinding.ActivityHomeBinding
 import com.example.desafiogds.databinding.ActivityMarcaBinding
 
@@ -18,10 +21,12 @@ class MarcaActivity : AppCompatActivity() {
         binding.btnVoltarMarca.setOnClickListener {
             voltarMarca()
         }
+        binding.inoutMarca.text.toString().trim()
+
     }
     private fun voltarMarca(){
         val voltarTela = Intent (this, HomeActivity::class.java)
         startActivity(voltarTela)
     }
 }
-//alguma coisa
+
