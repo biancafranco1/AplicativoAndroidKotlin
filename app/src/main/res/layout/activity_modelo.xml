@@ -52,7 +52,6 @@
         android:layout_marginBottom="312dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="MODELO"
         android:textColor="#918888"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

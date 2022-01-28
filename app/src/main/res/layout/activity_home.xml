@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo"
-    tools:context=".HomeActivity" >
+    tools:context=".HomeActivity">
 
     <ImageView
         android:id="@+id/imgCarro"
@@ -40,7 +40,9 @@
         android:backgroundTint="@color/button"
         android:text="Cadastrar marca"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadModelo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,12 +50,13 @@
         android:id="@+id/btnCadModelo"
         android:layout_width="200dp"
         android:layout_height="62dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/button"
         android:text="cadastrar modelo"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadPlaca"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCadMarca" />
 
@@ -61,13 +64,14 @@
         android:id="@+id/btnCadPlaca"
         android:layout_width="202dp"
         android:layout_height="65dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="68dp"
         android:backgroundTint="@color/button"
         android:text="cadastrar placa"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCadModelo"
         app:layout_constraintVertical_bias="1.0" />

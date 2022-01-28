@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.provider.BaseColumns
 import android.util.Log
 import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import com.example.desafiogds.databinding.ActivityModeloBinding
 import com.example.desafiogds.db.DatabaseHandler
@@ -34,9 +35,13 @@ class ModeloActivity : AppCompatActivity() {
         startActivity(voltarTela)
     }
 
+    //Consulta de opções do spinner
     private fun obterMarcas() {
+
         val db = dbHelper.readableDatabase
+        //Colunas a ser pesquisadas
         val select = arrayOf(BaseColumns._ID, FeedReaderContract.FeedEntry.COLUMN_NAME_MARCA)
+        //Realização da consulta
         val cursor = db.query(
             FeedReaderContract.FeedEntry.TABLE_NAME,
             select,
@@ -46,44 +51,27 @@ class ModeloActivity : AppCompatActivity() {
             null,
             null
         )
-
-        /*val items: Array<Marca> = arrayOf()
-        with(cursor) {
-            while (moveToNext()) {
-                val itemId = getLong(getColumnIndexOrThrow(BaseColumns._ID))
-                val itemMarca = getString(getColumnIndexOrThrow(FeedReaderContract.FeedEntry.COLUMN_NAME_MARCA))
-                items.plus(Marca(itemId,itemMarca))
-            }
-        }*/
-
         //Percorre o retorno dos itens do banco. Tabela Marcas
         val marcas = mutableListOf<String>()
+
+        //Busca a marca no resultado da consulta
         with(cursor) {
             while (moveToNext()) {
                 val marca = getString(getColumnIndexOrThrow(FeedReaderContract.FeedEntry.COLUMN_NAME_MARCA))
+
+                //Lista de marcas que podem ser selecionadas no spinner
                 marcas.add(marca)
             }
         }
 
-        val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, marcas)
-        selectMarca.adapter = arrayAdapter
+        //Configura as opções para o spinner
+        //Não tinha dado certo :( Tem que ver novos tutoriais no youtube
+
 
         cursor.close()
 
-        println(marcas.toString())
-
-        Log.v("teste", marcas.toString());
+        //Remover depois de estar funcionando o spinner
         Toast.makeText( this, marcas.toString(), Toast.LENGTH_LONG).show()
-        //println(cursor);
-
-
-        /*val spinnerAdapter: ArrayAdapter<String> =
-            ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, cursor)
-
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        seu_spinner.setAdapter(spinnerAdapter)*/
-
-       /*Toast.makeText( this, cursor, Toast.LENGTH_SHORT).show()*/
     }
 
 

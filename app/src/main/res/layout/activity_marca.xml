@@ -47,7 +47,6 @@
         android:layout_marginBottom="52dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="MARCA"
         android:textColor="#918888"
         app:layout_constraintBottom_toTopOf="@+id/btnGravarMarca"
         app:layout_constraintEnd_toEndOf="parent"
