@@ -29,8 +29,6 @@ class ModeloActivity : AppCompatActivity() {
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listaSpnMarca)
         binding.selectMarca.adapter = spinnerAdapter
 
-        //binding.btnGravarModelo.setOnClickListener {}
-        //Consulta de opções do spinner
      //Funcionalidade pro botão
         binding.btnVoltarModelo.setOnClickListener {
             voltarModelo()
@@ -78,8 +76,6 @@ class ModeloActivity : AppCompatActivity() {
 
         cursor.close()
 
-        //Remover depois de estar funcionando o spinner
-        Toast.makeText( this, marcas.toString(), Toast.LENGTH_LONG).show()
     }
 
 
