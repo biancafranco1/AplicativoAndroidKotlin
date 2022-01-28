@@ -13,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
+    //funcionalidade dos botões
         binding.btnCadMarca.setOnClickListener {
             cadMarca()
         }
