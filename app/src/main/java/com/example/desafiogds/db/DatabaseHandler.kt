@@ -5,18 +5,18 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.os.Build.ID
 import android.provider.BaseColumns
-import com.example.desafiogds.db.FeedReaderContract.FeedEntry.COLUMN_NAME_MARCA
-import com.example.desafiogds.db.FeedReaderContract.FeedEntry.TABLE_NAME
 
-object FeedReaderContract {
-      object FeedEntry : BaseColumns {
+    object FeedReaderContractMarca {
+      object FeedEntryMarca : BaseColumns {
         const val TABLE_NAME = "Marcas"
         const val COLUMN_NAME_MARCA = "marca"
     }
 }
-private const val CREATE_TABLE = "CREATE TABLE ${FeedReaderContract.FeedEntry.TABLE_NAME}(${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, ${FeedReaderContract.FeedEntry.COLUMN_NAME_MARCA} TEXT)"
+    private const val CREATE_TABLE = "CREATE TABLE ${FeedReaderContractMarca.FeedEntryMarca.TABLE_NAME}" +
+        "(${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        "${FeedReaderContractMarca.FeedEntryMarca.COLUMN_NAME_MARCA} TEXT)"
 
-class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DB_NAME, null, DB_VERSION){
+    class DatabaseHandler (context: Context): SQLiteOpenHelper(context,DB_NAME, null, DB_VERSION){
     companion object{
         const val DB_VERSION = 1
         const val DB_NAME = "Cadware"

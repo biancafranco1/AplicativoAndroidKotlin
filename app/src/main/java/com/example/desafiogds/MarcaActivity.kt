@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.desafiogds.databinding.ActivityMarcaBinding
 import com.example.desafiogds.db.DatabaseHandler
-import com.example.desafiogds.db.FeedReaderContract
+import com.example.desafiogds.db.FeedReaderContractMarca
+import com.example.desafiogds.db.FeedReaderContractModelo
+import com.example.desafiogds.db.FeedReaderContractPlaca
 
 class MarcaActivity : AppCompatActivity() {
     val dbHelper = DatabaseHandler(this)
@@ -24,12 +26,12 @@ class MarcaActivity : AppCompatActivity() {
         }
         binding.btnGravarMarca.setOnClickListener {
             val marca = binding.inoutMarca.text.toString().trim()
-            val marcaObj = Marca (1, marca)
+           // val marcaObj = Marca (1, marca)
             val db = dbHelper.writableDatabase
             val values = ContentValues().apply {
-                put(FeedReaderContract.FeedEntry.COLUMN_NAME_MARCA, marca)
+                put(FeedReaderContractMarca.FeedEntryMarca.COLUMN_NAME_MARCA, marca)
             }
-            val newRowId = db?.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
+            val newRowId = db?.insert(FeedReaderContractMarca.FeedEntryMarca.TABLE_NAME, null, values)
             Toast.makeText( this,"A marca " + marca + "foi cadastrada com id " + newRowId, Toast.LENGTH_SHORT).show()
         }
 
